@@ -1,0 +1,54 @@
+stages:
+  - build_backend
+  - deploy_backend
+  - build_frontend
+  - deploy_frontend
+
+build_backend:
+  stage: build_backend
+  script: warehouse_server/ci/build.sh
+  tags:
+    - ws-vm02
+  rules:
+    - if: $CI_COMMIT_REF_NAME == "master"
+      when: manual
+      changes:
+        - warehouse_server/**/*
+
+deploy_backend:
+  stage: deploy_backend
+  script:
+    - warehouse_server/ci/deploy.sh
+  tags:
+    - ws-vm02
+  rules:
+    - if: $CI_COMMIT_REF_NAME == "master"
+      when: manual
+      changes:
+        - warehouse_server/**/*
+
+build_frontend:
+  stage: build_frontend
+  script:
+    - warehouse_ui/ci/build_ui_server.sh
+    - warehouse_ui/ci/build_ui.sh
+  tags:
+    - ws-vm02
+  rules:
+    - if: $CI_COMMIT_REF_NAME == "master"
+      when: manual
+      changes:
+        - warehouse_ui/**/*
+
+deploy_frontend:
+  stage: deploy_frontend
+  script:
+    - warehouse_ui/ci/deploy_ui_server.sh
+    - warehouse_ui/ci/deploy_ui.sh
+  tags:s
+    - ws-vm02
+  rules:
+    - if: $CI_COMMIT_REF_NAME == "master"
+      when: manual
+      changes:
+        - warehouse_ui/**/*

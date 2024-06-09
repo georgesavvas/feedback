@@ -1,0 +1,26 @@
+.ql-editor {
+  font-size: 16px;
+  font-family: "Roboto";
+  padding: 0;
+}
+
+.shorten {
+  .ql-editor {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+}
+
+.quill > .ql-container > .ql-editor.ql-blank::before{
+  font-size: 16px;
+  color: grey;
+  font-style: normal;
+  margin-left: -15px;
+}
+
+.cursor-pointer p {
+  cursor: pointer;
+}

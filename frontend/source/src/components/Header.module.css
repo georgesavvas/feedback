@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  height: 80px;
+  padding: 8px 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 100%;
+}
+
+.logoContainer {
+  height: 100%;
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.menuContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.loginContainer {
+  display: flex;
+  justify-content: flex-end;
+  flex-basis: 0;
+  flex-grow: 1;
+}

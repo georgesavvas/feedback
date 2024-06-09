@@ -1,0 +1,81 @@
+[MASTER]
+
+# Specify a score threshold to be exceeded before program exits with error.
+fail-under=10.0
+
+# Add files or directories to the blacklist. They should be base names, not
+# paths.
+ignore=env,
+       baffle
+
+# Add files or directories matching the regex patterns to the blacklist. The
+# regex matches against base names, not paths.
+#ignore-patterns=
+
+# Python code to execute, usually for sys.path manipulation such as
+# pygtk.require().
+#init-hook=
+
+
+[MESSAGES CONTROL]
+
+disable=no-absolute-import
+
+
+[BASIC]
+
+# Naming style matching correct argument names.
+argument-naming-style=snake_case
+
+# Naming style matching correct attribute names.
+attr-naming-style=snake_case
+
+# Bad variable names which should always be refused, separated by a comma.
+bad-names=foo,
+          bar,
+          baz,
+          toto,
+          tutu,
+          tata
+
+# Naming style matching correct class attribute names.
+class-attribute-naming-style=any
+
+# Naming style matching correct class names.
+class-naming-style=PascalCase
+
+# Naming style matching correct constant names.
+const-naming-style=UPPER_CASE
+
+# Naming style matching correct function names.
+function-naming-style=snake_case
+
+# Good variable names which should always be accepted, separated by a comma.
+good-names=i,
+           j,
+           k,
+           ex,
+           Run,
+           _
+
+# Naming style matching correct method names.
+method-naming-style=snake_case
+
+# Naming style matching correct module names.
+module-naming-style=snake_case
+
+# Naming style matching correct variable names.
+variable-naming-style=snake_case
+
+
+[STRING]
+
+# This flag controls whether inconsistent-quotes generates a warning when the
+# character used as a quote delimiter is used inconsistently within a module.
+check-quote-consistency=no
+
+
+[VARIABLES]
+
+# Tells whether unused global variables should be treated as a violation.
+allow-global-unused-variables=yes

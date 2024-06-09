@@ -1,0 +1,43 @@
+.navbarContainer {
+  z-index: 2;
+  background-color: grey;
+}
+
+.bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: rgb(10, 10, 10);
+}
+
+.warehouse {
+  background-image: url(/public/media/warehouse/bg.jpg);
+  backdrop-filter: brightness(25%);
+}
+
+.warehouse::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0, 0, 0, 0.75); */
+  background: linear-gradient(25deg, rgba(20, 32, 46, 0.6) 0%, rgba(20, 32, 46, 0.8) 100%);
+}
+
+.warehouse::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+}

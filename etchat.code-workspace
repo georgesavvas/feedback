@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "BACKEND",
+			"path": "backend/source/python",
+		},
+		{
+			"name": "FRONTEND",
+			"path": "frontend",
+		}
+	],
+	"settings": {
+		"cSpell.words": [
+			"asar",
+			"colour",
+			"enquesnackbar",
+			"modtime",
+			"onreconnect",
+			"passcode"
+		]
+	}
+}

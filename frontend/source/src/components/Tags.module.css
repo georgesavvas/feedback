@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  width: 100%;
+}
+
+.tag {
+  border-radius: 20px;
+  padding: 5px 10px 5px 10px;
+  background-color: whitesmoke;
+  height: 20px;
+}
+
+.topBar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}

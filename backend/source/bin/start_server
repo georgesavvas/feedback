@@ -1,0 +1,14 @@
+#!/bin/bash
+
+while getopts p:w: flag
+do
+    case "${flag}" in
+        p) port=${OPTARG};;
+        w) workers=${OPTARG};;
+    esac
+done
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+cd $SCRIPT_DIR/../python;
+gunicorn feedback.main:app --workers ${workers:-1} --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:${port:-8080}
